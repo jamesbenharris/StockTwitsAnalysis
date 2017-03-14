@@ -15,5 +15,5 @@ DB_PWD = ''
 
 # Store DB Information 
 db = [SERVER,DATABASE,TABLE,DB_UN,DB_PWD]
-# Execute Class
+# Call Function
 storeAnalysis(db,tickers)
