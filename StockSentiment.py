@@ -39,7 +39,7 @@ def sentiment(message):
     return msg
 
 def writeToDatabase(server, db, table, un, pwd, ticker, sentiment, source):
-    #try:
+    try:
         connection_string = "host='%s' dbname='%s' user='%s' password='%s'" % (server,db,un,pwd)
         conn = psycopg2.connect(connection_string)
         cur = conn.cursor()
@@ -48,8 +48,8 @@ def writeToDatabase(server, db, table, un, pwd, ticker, sentiment, source):
         conn.commit()
         cur.close()
         conn.close()
-    #except:
-    #    print("Unexpected error:", sys.exc_info()[0])
+    except:
+        print("Unexpected error:", sys.exc_info()[0])
 
 def query(ticker):
     url = "https://api.stocktwits.com/api/2/streams/symbol/%s.json?limit=30"%(ticker)
