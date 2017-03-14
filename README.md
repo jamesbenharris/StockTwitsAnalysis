@@ -6,7 +6,7 @@ import StockSentiment
 # Variables
 tickers = ['TSLA','SNAP','AAPL','AMZN','YHOO','GOOG']
 
-# Database Information
+# PostgreSQL Database Information
 SERVER = 'localhost'
 DATABASE = 'Stock'
 TABLE = '"Sentiment"'
